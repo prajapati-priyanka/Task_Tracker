@@ -3,6 +3,7 @@ import { ReactComponent as HamburgerMenu } from "../../../assets/menu.svg";
 
 import SearchField from './SearchField';
 import useScreenMedia from '../../../hooks/useScreenMedia';
+import AddTaskBtn from '../../../utilities/AddTaskBtn';
 
 
 const Header = () => {
@@ -26,13 +27,10 @@ const Header = () => {
       </div>
   
 
-      <div className="flex flex-1 ">
+   <AddTaskBtn className={`btn sm:static fixed bottom-3 right-3 z-10 sm:z-0 min-w-max shadow-lg shadow-slate-400     sm:shadow-transparent`} />
        
-      <button className={`btn sm:static fixed bottom-3 right-3 z-10 sm:z-0 min-w-max shadow-lg shadow-slate-400     sm:shadow-transparent`}>
-        Add new task
-      </button>
-        
-      </div>
+    
+  
 
    
   </header>
