@@ -2,7 +2,7 @@ import React from 'react'
 import { ReactComponent as Check } from "../../assets/check.svg";
 
 
-const BtnToggleCompleted = () => {
+const CompletedBtnToggle = () => {
     return (
         <button
             title={"mark as completed"}
@@ -21,4 +21,4 @@ const BtnToggleCompleted = () => {
     )
 }
 
-export default BtnToggleCompleted
+export default CompletedBtnToggle
