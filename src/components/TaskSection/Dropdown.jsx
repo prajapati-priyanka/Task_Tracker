@@ -1,21 +1,19 @@
-import React from 'react'
-
+import React from "react";
 
 const sortValues = [
-    { value: "order-added", title: "Order added" },
-    { value: "min-date", title: "Earlier first" },
-    { value: "max-date", title: "Later first" },
-    { value: "completed-first", title: "Completed first" },
-    { value: "uncompleted-first", title: "Uncompleted first" },
-  ];
+  { value: "min-date", title: "Earlier first" },
+  { value: "max-date", title: "Later first" },
+  { value: "completed-first", title: "Completed first" },
+  { value: "pending-first", title: "Pending first" },
+];
 
-const Dropdown = () => {
-    return (
-      
-     
+const Dropdown = ({ sortedBy, setSortedBy }) => {
+  return (
+    <div className="flex children-styles">
       <select
         className="ml-auto inputStyles"
-      
+        value={sortedBy}
+        onChange={({ target }) => setSortedBy(target.value)}
       >
         <option value="" disabled>
           Sort by
@@ -30,8 +28,8 @@ const Dropdown = () => {
           </option>
         ))}
       </select>
-  
-    )
-}
+    </div>
+  );
+};
 
-export default Dropdown
+export default Dropdown;
