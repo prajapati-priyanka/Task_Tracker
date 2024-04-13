@@ -9,11 +9,7 @@ import { modalActions } from './redux/store/slices/modalSlice';
 
 const App = () => {
   const modal = useSelector((state) => state.modal);
-
-  console.log(modal,"modal")
-
   const dispatch = useDispatch();
-
   const closeModalCreateTask = () => {
     dispatch(modalActions.closeModalCreateTask());
   };
