@@ -5,16 +5,16 @@ import { useDispatch } from "react-redux";
 
 const links = [
   {
-    name: "All tasks",
+    name: "All Tasks",
     path: "/",
   },
 
   {
-    name: "Completed tasks",
+    name: "Completed Tasks",
     path: "/completed",
   },
   {
-    name: "Pending tasks",
+    name: "Pending Tasks",
     path: "/pending",
   },
 ];

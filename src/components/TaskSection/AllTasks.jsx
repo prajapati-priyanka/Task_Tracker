@@ -5,7 +5,7 @@ import TaskLayout from "../../utilities/TaskLayout";
 const Home = () => {
   const tasks = useSelector((state) => state.tasks.tasks);
 
-  return <TaskLayout title="All tasks" tasks={tasks} />;
+  return <TaskLayout title="All Tasks" tasks={tasks} />;
 };
 
 export default Home;
