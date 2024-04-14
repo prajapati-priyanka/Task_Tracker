@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const links = [
   {
@@ -17,8 +17,7 @@ const links = [
   },
 ];
 const Navlinks = ({ classActive }) => {
- 
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <nav>
