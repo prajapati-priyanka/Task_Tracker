@@ -25,16 +25,19 @@ const Header = () => {
       </button>
 
       <SearchField />
-
-      <span className="text-slate-600 text-center uppercase font-bold text-base block xl:hidden heading">
+   
+     <span className="flex-1 text-slate-600 text-center uppercase font-bold text-base block xl:hidden heading">
         Task Tracker
       </span>
-
-      <div className="flex flex-1 sm:mr-4 md:mr-6 ml-auto grid place-items-center relative">
-        <AddTaskBtn
-          className={`btn sm:static fixed bottom-3 right-3 z-10 sm:z-0 min-w-max shadow-lg shadow-slate-400 sm:shadow-transparent  `}
-        />
-      </div>
+    
+    
+     <div className=" ml-auto grid place-items-center relative">
+  
+     <AddTaskBtn
+        className={`btn sm:static fixed bottom-3 right-3 z-10 sm:z-0 min-w-max shadow-lg shadow-slate-400 sm:shadow-transparent `}
+      />
+     </div>
+     
     </header>
   );
 };

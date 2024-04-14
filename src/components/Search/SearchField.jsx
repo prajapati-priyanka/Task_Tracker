@@ -3,6 +3,8 @@ import { createSearchParams, useNavigate } from "react-router-dom";
 import useSearchQuery from "../../hooks/useSearchQuery";
 import useVisibility from "../../hooks/useVisibilty";
 import ItemSearch from "./ItemSearch";
+import { ReactComponent as Search } from "../../assets/search.svg";
+
 
 const SearchField = () => {
   const navigate = useNavigate();
@@ -39,7 +41,7 @@ const SearchField = () => {
 
   return (
     <div className="flex-1 col-span-3 row-start-2 md:pr-10">
-      <form className=" relative md:max-w-xs w-full" autoComplete="off">
+      <form className=" relative  w-full" autoComplete="off">
         <label htmlFor="search" className="sr-only"></label>
         <input
           type="search"
@@ -51,7 +53,7 @@ const SearchField = () => {
             setSearchInputValue(currentTarget.value);
           }}
         />
-        {/* <Search className="absolute w-4 sm:w-5 right-4 top-3.5 text-slate-400" /> */}
+        <Search className="absolute w-4 sm:w-5 left-2 top-3.5 text-slate-400" />
         {listResultsVisible && (
           <div className="absolute bg-slate-100 rounded-md w-full top-14 p-3 dark:bg-slate-800 z-10">
             {tasks.length ? (
