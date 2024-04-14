@@ -1,6 +1,6 @@
 # Task Tracker
 
-Task Tracker is a task taking app, where user can organize there tasks effectively.
+Task Tracker is an app, where user can create and maintain tasks effectively.
 
 # [Live Demo](https://mytasktrackingapp.netlify.app/)
 
@@ -9,7 +9,6 @@ Task Tracker is a task taking app, where user can organize there tasks effective
 - React Router DOM
 - Redux Toolkit
 - React-Redux
-- Chakra UI
 - Tailwind CSS
 - JEST
 
@@ -34,16 +33,11 @@ Task Tracker is a task taking app, where user can organize there tasks effective
 
 - State Persistance mechanism is implemented by using LocalStorage.
   
-
-
-
 ## How To Run Locally
 
  - Fork the project
  - Run **npm install** in the terminal
  - Run **npm start** in the terminal to run the project on your local host
-
-
 ## Folder Structure
 
 ```jsx
