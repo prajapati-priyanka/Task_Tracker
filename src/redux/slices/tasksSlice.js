@@ -53,7 +53,9 @@ const tasksSlice = createSlice({
     removeTask(state, action) {
       const taskIdToRemove = action.payload;
       state.tasks = state.tasks.filter((task) => task.id !== taskIdToRemove);
-      localStorage.setItem("tasks", JSON.stringify(state.tasks));
+      state.tasks.length === 0 || state.tasks == []
+        ? localStorage.removeItem("tasks")
+        : localStorage.setItem("tasks", JSON.stringify(state.tasks));
     },
     toggleTaskCompleted(state, action) {
       const taskId = action.payload;
