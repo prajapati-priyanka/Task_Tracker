@@ -11,7 +11,7 @@ const TaskLayout = ({ title, tasks }) => {
   const { sortedBy, setSortedBy, sortedTasks } = useSortTasks(tasks);
 
   const tasksTitle = `${title} (${tasks?.length} ${
-    tasks?.length >= 1 ? "tasks" : "task"
+    tasks?.length > 1 ? "tasks" : "task"
   })`;
 
   const openModalHandler = () => {
@@ -20,14 +20,13 @@ const TaskLayout = ({ title, tasks }) => {
 
   return (
     <section>
-      <div className="items-center grid grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 md:flex sm:justify-between">
-        <h1 className="font-medium my-5 text-center sm:text-left sm:my-8 md:text-2xl text-lg text-center">
-          {" "}
-          {tasksTitle}
-        </h1>
-        {/* dropdown component */}
-        <Dropdown sortedBy={sortedBy} setSortedBy={setSortedBy} />
-      </div>
+      <h1 className="font-medium my-5 text-center sm:text-left sm:my-8 md:text-2xl text-lg">
+        {" "}
+        {tasksTitle}
+      </h1>
+      {/* dropdown component */}
+      <Dropdown sortedBy={sortedBy} setSortedBy={setSortedBy} />
+
       <ul
         className="tasksList mt-4 grid gap-2 sm:gap-4 xl:gap-6 
             2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 items-end"
