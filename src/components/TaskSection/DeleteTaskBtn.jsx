@@ -13,7 +13,6 @@ const DeleteTaskBtn = ({ taskId }) => {
     dispatch(tasksActions.removeTask(taskId));
   };
 
-  console.log("delete Button called")
   return (
     <>
       {showModal && (
