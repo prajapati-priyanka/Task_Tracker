@@ -1,4 +1,4 @@
-# Pine Notes
+# Task Tracker
 
 Task Tracker is a task taking app, where user can organize there tasks effectively.
 
