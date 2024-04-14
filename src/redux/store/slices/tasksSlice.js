@@ -3,26 +3,28 @@ import { createSlice } from "@reduxjs/toolkit";
 const defaultTasks = [
   {
     title: "Task 1",
-    important: false,
     description: "This is the description for this task",
     date: "2023-04-12",
     completed: true,
+    pending: false,
     id: "t1",
   },
   {
     title: "Task 2",
-    important: true,
+
     description: "This is the description for this task",
     date: "2023-05-15",
     completed: true,
+    pending: false,
     id: "t2",
   },
   {
     title: "Task 3",
-    important: false,
+
     description: "This is the description for this task",
     date: "2023-08-21",
     completed: false,
+    pending: true,
     id: "t3",
   },
 ];
@@ -55,9 +57,7 @@ const tasksSlice = createSlice({
     },
     toggleTaskCompleted(state, action) {
       const taskId = action.payload;
-
       const currTask = state.tasks.find((task) => task.id === taskId);
-
       if (currTask) {
         currTask.completed = !currTask.completed;
         localStorage.setItem("tasks", JSON.stringify(state.tasks));

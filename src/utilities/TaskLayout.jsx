@@ -1,16 +1,16 @@
 import React from "react";
-import Dropdown from "./Dropdown";
-import TaskCard from "./TaskCard";
-import { useSelector } from "react-redux";
-import useSortTasks from "../../hooks/useSortTasks";
+import useSortTasks from "../hooks/useSortTasks";
+import Dropdown from "../components/TaskSection/Dropdown";
+import TaskCard from "../components/TaskSection/TaskCard";
 
-const Task = ({title}) => {
-  const tasks = useSelector((state) => state.tasks.tasks);
+
+const TaskLayout = ({title, tasks }) => {
+
 
   const { sortedBy, setSortedBy, sortedTasks } = useSortTasks(tasks);
 
-  const tasksTitle = `${title} (${tasks.length} ${
-    tasks.length === 1 ? "task" : "tasks"
+  const tasksTitle = `${title} (${tasks?.length} ${
+    tasks?.length === 1 ? "task" : "tasks"
   })`;
   
   return (
@@ -25,12 +25,12 @@ const Task = ({title}) => {
       </div>
       <div className="flex flex-row gap-8 mt-10">
         {/* Task component */}
-        {sortedTasks.map((task) => (
-          <TaskCard key={task.id} task={task} />
+        {sortedTasks?.map((task) => (
+          <TaskCard key={task?.id} task={task} />
         ))}
       </div>
     </section>
   );
 };
 
-export default Task;
+export default TaskLayout;

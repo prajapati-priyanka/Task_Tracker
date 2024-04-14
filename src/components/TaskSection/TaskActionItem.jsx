@@ -9,7 +9,7 @@ const TaskActionItem = ({ task }) => {
       className={`flex border-dashed border-slate-200 border-t-2 w-full pt-4 mt-4
     }`}
     >
-      <CompletedBtnToggle taskCompleted={task.completed} taskId={task.id} />
+      <CompletedBtnToggle taskCompleted={task.completed} taskPending={task.pending} taskId={task.id} />
       <DeleteTaskBtn taskId={task.id} />
       <EditTaskBtn task={task} />
 

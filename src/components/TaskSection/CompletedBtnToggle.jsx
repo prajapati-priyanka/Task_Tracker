@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { tasksActions } from '../../redux/store/slices/tasksSlice';
 
 
-const CompletedBtnToggle = ({taskCompleted,taskId}) => {
+const CompletedBtnToggle = ({taskCompleted,taskPending,taskId}) => {
     const dispatch = useDispatch();
 
     const toggleTaskCompleted = (id) => {
@@ -23,7 +23,7 @@ const CompletedBtnToggle = ({taskCompleted,taskId}) => {
         onClick={() => toggleTaskCompleted(taskId)}
       >
         <span className="block py-1 px-3 absolute invisible sm:static sm:visible">
-          {taskCompleted ? "completed" : "pending"}
+          {taskCompleted ? "completed" : taskPending ? "pending" : "pending"}
         </span>
         <span className=" sm:hidden w-6 h-6 grid place-items-center">
           {taskCompleted ? (
