@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .inputStyles {
-  @apply bg-slate-100 text-slate-600  rounded-lg p-3 px-8 border-2 border-transparent hover:border-violet-600 focus:border-violet-600 focus:outline-none transition
+  @apply bg-slate-100 text-slate-600  rounded-lg p-3 px-8 border-2 border-transparent hover:border-violet-600 focus:border-violet-600 focus:outline-none transition;
 }
 
 .btn {
-  @apply bg-violet-600 hover:bg-violet-700 py-3 px-6 text-slate-50 rounded-lg w-auto transition 
+  @apply bg-violet-600 hover:bg-violet-700 py-3 px-6 text-slate-50 rounded-lg w-auto transition;
 }
 
 .btn:active {
@@ -16,13 +16,13 @@
 
 @layer components {
   .tasksList > li:first-of-type article {
-    @apply bg-violet-600 text-slate-100 ;
+    @apply bg-violet-600 text-slate-100;
   }
   .tasksList > li:first-of-type article .description {
     @apply text-violet-300;
   }
   .tasksList > li:first-of-type article > div {
-    @apply border-violet-500 ;
+    @apply border-violet-500;
   }
 
   .children-styles {
@@ -43,6 +43,6 @@
     @apply inputStyles mt-1;
   }
   .stylesInputsField label {
-    @apply mb-4 text-slate-600 ;
+    @apply mb-4 text-slate-600;
   }
 }

@@ -1,9 +1,13 @@
+
+
+
+
 # Task Tracker
 
 Task Tracker is an app, where user can create and maintain tasks effectively.
 
-# [Live Demo](https://mytasktrackingapp.netlify.app/)
-
+# Live Demo
+https://github.com/prajapati-priyanka/to-do-app/assets/81961482/978ade47-9134-4260-b37f-963b9d9938ee
 ## Tech Stack
 - ReactJs
 - React Router DOM
@@ -67,3 +71,7 @@ Task Tracker is an app, where user can create and maintain tasks effectively.
 -  [Linkedin](https://www.linkedin.com/in/priyanka-prajapati-853098146/)
 
 - [Portfolio](https://priyanka-prajapati.netlify.app/)
+
+
+
+
