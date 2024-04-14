@@ -21,8 +21,6 @@ const EditTaskBtn = ({ task }) => {
     dispatch(tasksActions.editTask(task));
   };
 
-  console.log("edit Button called")
-
   return (
     <>
       <button

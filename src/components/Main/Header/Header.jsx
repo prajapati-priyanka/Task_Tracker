@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as HamburgerMenu } from "../../../assets/menu.svg";
 
-import SearchField from "./SearchField";
+import SearchField from "../../Search/SearchField";
 import useScreenMedia from "../../../hooks/useScreenMedia";
 import AddTaskBtn from "../../../utilities/AddTaskBtn";
 import { menusActions } from "../../../redux/store/slices/menuSlice";

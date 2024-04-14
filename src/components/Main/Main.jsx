@@ -1,9 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { useSelector } from "react-redux";
-import Header from "./Header/Header";
 import CompletedTasks from "../TaskSection/CompletedTask";
 import AllTasks from "../TaskSection/AllTasks";
+import Header from "../Main/Header/Header"
+import SearchResults from "../Search/SearchResults";
+import TaskOnly from "../Search/TaskOnly";
+
 
 const Main = () => {
   return (
@@ -19,6 +21,8 @@ const Main = () => {
           path="/pending"
           element={<CompletedTasks done={false} title="Pending Tasks" />}
         />
+        <Route path="/results" element={<SearchResults />} />
+        <Route path="/task/:taskId" element={<TaskOnly />} />
       </Routes>
     </div>
   );
