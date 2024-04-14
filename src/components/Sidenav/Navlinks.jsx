@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { menusActions } from "../../redux/slices/menuSlice";
+import { useDispatch } from "react-redux";
 
 const links = [
   {
@@ -18,6 +20,7 @@ const links = [
 ];
 const Navlinks = ({ classActive }) => {
   const location = useLocation();
+  const dispatch = useDispatch();
 
   return (
     <nav>
@@ -29,6 +32,7 @@ const Navlinks = ({ classActive }) => {
               className={`px-4 py-2 w-full block transition hover:text-rose-600  ${
                 location.pathname === link.path ? classActive : ""
               }`}
+              onClick={() => dispatch(menusActions.closeMenuHeader())}
             >
               {link.name}
             </NavLink>
