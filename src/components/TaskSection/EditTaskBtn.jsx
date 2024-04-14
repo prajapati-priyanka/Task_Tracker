@@ -24,7 +24,7 @@ const EditTaskBtn = ({ task }) => {
     <>
       <button
         title="edit task"
-        className="transition w-7 sm:w-8 h-6 sm:h-8 grid place-items-center"
+        className="transition w-7 sm:w-8 h-6 sm:h-8 grid place-items-center hover:text-slate-700"
         onClick={openModalEditTask}
       >
         <Edit className="w-4 sm:w-5 h-4 sm:h-5" />

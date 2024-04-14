@@ -5,14 +5,16 @@ import TaskInfo from "./TaskInfo";
 
 const TaskCard = ({ task }) => {
   return (
-    <>
+  
+    <li key={task.id}>
       <article
         className={`bg-white rounded-lg p-3 sm:p-4 flex text-left transition hover:shadow-lg hover:shadow-slate-300 flex-col h-52 sm:h-64`}
       >
         <TaskInfo task={task} />
         <TaskActionItem task={task} />
       </article>
-    </>
+      </li>
+
   );
 };
 

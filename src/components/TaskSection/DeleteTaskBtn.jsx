@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-
 import { ReactComponent as Trash } from "../../assets/trash.svg";
 import { useDispatch } from "react-redux";
 import ModalConfirm from "../../utilities/ModalConfirm";
 import { tasksActions } from "../../redux/slices/tasksSlice";
-
 
 const DeleteTaskBtn = ({ taskId }) => {
   const [showModal, setIsModalShown] = useState(false);
