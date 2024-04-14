@@ -11,10 +11,12 @@ const CompletedBtnToggle = ({taskCompleted,taskPending,taskId}) => {
     const toggleTaskCompleted = (id) => {
       dispatch(tasksActions.toggleTaskCompleted(id));
     };
+  console.log("completed Button called")
+
   
     return (
       <button
-        title={taskCompleted ? "mark as uncompleted" : "mark as completed"}
+        title={taskCompleted ? "mark as pending" : "mark as completed"}
         className={`${
           taskCompleted
             ? "bg-emerald-200 text-emerald-800 "
@@ -36,4 +38,4 @@ const CompletedBtnToggle = ({taskCompleted,taskPending,taskId}) => {
     );
 }
 
-export default CompletedBtnToggle
+export default React.memo(CompletedBtnToggle)

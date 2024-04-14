@@ -12,6 +12,8 @@ const DeleteTaskBtn = ({ taskId }) => {
   const removeTaskHandler = () => {
     dispatch(tasksActions.removeTask(taskId));
   };
+
+  console.log("delete Button called")
   return (
     <>
       {showModal && (
@@ -24,7 +26,7 @@ const DeleteTaskBtn = ({ taskId }) => {
       <button
         onClick={() => setIsModalShown(true)}
         title="delete task"
-        className="ml-2 transition hover:text-slate-700 dark:hover:text-slate-200"
+        className="ml-2 transition hover:text-slate-700"
       >
         <Trash className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
@@ -32,4 +34,4 @@ const DeleteTaskBtn = ({ taskId }) => {
   );
 };
 
-export default DeleteTaskBtn;
+export default React.memo(DeleteTaskBtn);

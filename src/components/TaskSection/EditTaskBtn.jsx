@@ -21,11 +21,13 @@ const EditTaskBtn = ({ task }) => {
     dispatch(tasksActions.editTask(task));
   };
 
+  console.log("edit Button called")
+
   return (
     <>
       <button
         title="edit task"
-        className="transition w-7 sm:w-8 h-6 sm:h-8 grid place-items-center dark:hover:text-slate-200 hover:text-slate-700"
+        className="transition w-7 sm:w-8 h-6 sm:h-8 grid place-items-center"
         onClick={openModalEditTask}
       >
         <Edit className="w-4 sm:w-5 h-4 sm:h-5" />
@@ -42,4 +44,4 @@ const EditTaskBtn = ({ task }) => {
   );
 };
 
-export default EditTaskBtn;
+export default React.memo(EditTaskBtn);
