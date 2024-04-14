@@ -18,7 +18,7 @@ const App = () => {
     dispatch(tasksActions.addNewTask(task));
   };
   return (
-    <div className="bg-slate-200 min-h-screen text-slate-600 xl:text-base sm:text-sm text-xs">
+    <div className="bg-slate-200 min-h-screen text-slate-600 xl:text-base sm:text-sm text-xs" data-testid="app-test-id">
       {modal.modalCreateTaskOpen && (
         <ModalCreateTask
           onClose={closeModalCreateTask}

@@ -21,7 +21,7 @@ const Sidenav = () => {
       closeMenuHandler={closeMenuHandler}
       className="left-0"
     >
-      <div className="h-full flex flex-col">
+      <div className="h-full flex flex-col" data-testid="sidenav-test-id">
         <div className="flex mt-8 items-center justify-center xl:justify-start">
           <img
             src={logo}

@@ -9,7 +9,7 @@ import TaskOnly from "../Search/TaskOnly";
 
 const Main = () => {
   return (
-    <div className="pt-5 pb-8 sm:pb-16 px-3 md:px-8 md:w-full xl:w-8/12 m-auto min-h-screen">
+    <div className="pt-5 pb-8 sm:pb-16 px-3 md:px-8 md:w-full xl:w-8/12 m-auto min-h-screen" data-testid="main-test-id">
       <Header />
       <Routes>
         <Route path="/" element={<AllTasks />} />
