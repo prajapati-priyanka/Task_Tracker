@@ -22,7 +22,7 @@ const Dropdown = ({ sortedBy, setSortedBy }) => {
           <option
             key={val.value}
             value={val.value}
-            className="bg-slate-100 dark:bg-slate-800"
+            className="bg-slate-100"
           >
             {val.title}
           </option>
