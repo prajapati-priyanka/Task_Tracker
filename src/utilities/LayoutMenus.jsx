@@ -16,7 +16,6 @@ const LayoutMenus = ({children}) => {
       {!mediaQueries.xl && (
         <div
           className="fixed bg-slate-600/[.2] w-full h-full z-10 top-0 left-0"
-         
         ></div>
       )}
     </>

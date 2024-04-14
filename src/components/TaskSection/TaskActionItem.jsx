@@ -1,7 +1,7 @@
 import React from "react";
-import BtnToggleCompleted from "./BtnToggleCompleted";
 import DeleteTaskBtn from "./DeleteTaskBtn";
 import EditTaskBtn from "./EditTaskBtn";
+import CompletedBtnToggle from "./CompletedBtnToggle";
 
 const TaskActionItem = ({ task }) => {
   return (
@@ -9,7 +9,7 @@ const TaskActionItem = ({ task }) => {
       className={`flex border-dashed border-slate-200 border-t-2 w-full pt-4 mt-4
     }`}
     >
-      <BtnToggleCompleted />
+      <CompletedBtnToggle taskCompleted={task.completed} taskPending={task.pending} taskId={task.id} />
       <DeleteTaskBtn taskId={task.id} />
       <EditTaskBtn task={task} />
 

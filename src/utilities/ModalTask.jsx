@@ -61,9 +61,9 @@ const ModalCreateTask = ({ onClose, task, nameForm, onConfirm }) => {
   const isTitleValid = useRef(false);
   const isDateValid = useRef(false);
 
-  const [isImportant, setIsImportant] = useState(() => {
+  const [isPending, setIsPending] = useState(() => {
     if (task) {
-      return task.important;
+      return task.pending;
     }
     return false;
   });
@@ -89,7 +89,7 @@ const ModalCreateTask = ({ onClose, task, nameForm, onConfirm }) => {
         description: description,
         date: date,
         completed: isCompleted,
-        important: isImportant,
+        pending: isPending,
         id: task?.id ? task.id : Date.now().toString(),
       };
       onConfirm(newTask);
@@ -137,9 +137,9 @@ const ModalCreateTask = ({ onClose, task, nameForm, onConfirm }) => {
         </label>
      
         <InputCheckbox
-          isChecked={isImportant}
-          setChecked={setIsImportant}
-          label="Mark as important"
+          isChecked={isPending}
+          setChecked={setIsPending}
+          label="Mark as pending"
         />
         <InputCheckbox
           isChecked={isCompleted}
