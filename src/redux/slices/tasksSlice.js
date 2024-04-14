@@ -53,7 +53,7 @@ const tasksSlice = createSlice({
     removeTask(state, action) {
       const taskIdToRemove = action.payload;
       state.tasks = state.tasks.filter((task) => task.id !== taskIdToRemove);
-      state.tasks.length === 0 
+      state.tasks.length === 0
         ? localStorage.removeItem("tasks")
         : localStorage.setItem("tasks", JSON.stringify(state.tasks));
     },
