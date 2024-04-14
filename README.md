@@ -53,6 +53,7 @@ https://github.com/prajapati-priyanka/to-do-app/assets/81961482/978ade47-9134-42
    - /tests
    - /utilities
    - App.js
+   - App.test.js
    - index.css
    - index.js
 - package-lock.json
