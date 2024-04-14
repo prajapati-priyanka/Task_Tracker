@@ -14,7 +14,11 @@ const ModalCreateTask = ({ onClose, task, nameForm, onConfirm }) => {
   }
 
   const todayDate = year + "-" + month + "-" + day;
-  const maxDate = year + 1 + "-" + month + "-" + day;
+  const maxDate = `${year + 1}-${month}-${day}`;
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate());
+  const tomorrowDate = tomorrow.toISOString().split("T")[0];
+
 
   const [description, setDescription] = useState(() => {
     if (task) {
@@ -81,7 +85,7 @@ const ModalCreateTask = ({ onClose, task, nameForm, onConfirm }) => {
         onSubmit={addNewTaskHandler}
       >
         <label>
-          Title
+          Title:
           <input
             type="text"
             placeholder="e.g, study for the test"
@@ -92,14 +96,14 @@ const ModalCreateTask = ({ onClose, task, nameForm, onConfirm }) => {
           />
         </label>
         <label>
-          Date
+         Due Date:
           <input
             type="date"
             className="w-full"
             value={date}
             required
             onChange={({ target }) => setDate(target.value)}
-            min={todayDate}
+            min={tomorrowDate}
             max={maxDate}
           />
         </label>
