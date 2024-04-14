@@ -1,6 +1,7 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import { modalActions } from "../redux/store/slices/modalSlice";
+import { modalActions } from "../redux/slices/modalSlice";
+
 
 
 const AddTaskBtn  = ({ className }) => {

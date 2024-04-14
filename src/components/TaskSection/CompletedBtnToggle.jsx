@@ -2,13 +2,14 @@ import React from "react";
 import { ReactComponent as Check } from "../../assets/check.svg";
 import { ReactComponent as SvgX } from "../../assets/x.svg";
 import { useDispatch } from "react-redux";
-import { tasksActions } from "../../redux/store/slices/tasksSlice";
+import { tasksActions } from "../../redux/slices/tasksSlice";
+
 
 const CompletedBtnToggle = ({ taskCompleted, taskPending, taskId }) => {
   const dispatch = useDispatch();
 
   const toggleTaskCompleted = (id) => {
-    dispatch(tasksActions.toggleTaskCompleted(id));
+  dispatch(tasksActions.toggleTaskCompleted(id));
   };
 
   return (

@@ -3,8 +3,9 @@ import Main from "./components/Main/Main";
 import Sidenav from "./components/Sidenav/Sidenav";
 import { useSelector, useDispatch } from "react-redux";
 import ModalCreateTask from "./utilities/ModalTask";
-import { tasksActions } from "./redux/store/slices/tasksSlice";
-import { modalActions } from "./redux/store/slices/modalSlice";
+import { tasksActions } from "./redux/slices/tasksSlice";
+import { modalActions } from "./redux/slices/modalSlice";
+
 
 const App = () => {
   const modal = useSelector((state) => state.modal);

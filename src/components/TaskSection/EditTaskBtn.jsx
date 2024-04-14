@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { ReactComponent as Edit } from "../../assets/edit.svg";
-
 import { useDispatch } from "react-redux";
-import { tasksActions } from "../../redux/store/slices/tasksSlice";
 import ModalCreateTask from "../../utilities/ModalTask";
+import { tasksActions } from "../../redux/slices/tasksSlice";
 
 const EditTaskBtn = ({ task }) => {
   const [modalEditTaskOpen, setModalEditTaskOpen] = useState(false);

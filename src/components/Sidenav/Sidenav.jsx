@@ -2,8 +2,9 @@ import React from "react";
 import LayoutMenus from "../../utilities/LayoutMenus";
 import Navlinks from "./Navlinks";
 import { useDispatch, useSelector } from "react-redux";
-import { menusActions } from "../../redux/store/slices/menuSlice";
+
 import logo from "../../assets/logo.png";
+import { menusActions } from "../../redux/slices/menuSlice";
 
 const Sidenav = () => {
   const menuOpen = useSelector((state) => state.menu.menuHeaderOpened);

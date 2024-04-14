@@ -4,8 +4,9 @@ import { ReactComponent as HamburgerMenu } from "../../../assets/menu.svg";
 import SearchField from "../../Search/SearchField";
 import useScreenMedia from "../../../hooks/useScreenMedia";
 import AddTaskBtn from "../../../utilities/AddTaskBtn";
-import { menusActions } from "../../../redux/store/slices/menuSlice";
+
 import { useDispatch } from "react-redux";
+import { menusActions } from "../../../redux/slices/menuSlice";
 
 const Header = () => {
   const mediaQueries = useScreenMedia();
